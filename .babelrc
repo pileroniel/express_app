@@ -1,0 +1,3 @@
+{   //this file is used to indicate our presets in the project
+    "presets": ["@babel/preset-env"]
+}
