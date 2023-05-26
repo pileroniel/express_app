@@ -1,0 +1,26 @@
+###Steps taken in building app
+Without using express generator, we first npm init this
+project and install express and nodemon
+
+npm install express nodemon
+
+Nodemon- a tool to automatically restart our server when a change is made to your project. We don't have to stop and start our server everytime a change is made to our program
+
+We install babel javascript compiler dev dependencies to ensure our project will be compatible with ES6
+
+--save-dev is used when installing dev dependecies
+
+npm install --save-dev @babel/core @babel/cli
+
+Four packages used from babel here are core, node, preset-env, cli
+
+Create cogif file for babel to indicate the presets we have installed
+touch .babelrc 
+
+In our package.json file we add "type":"module" to enable modules to be used in your project
+
+In the scripts section we configure how our start script works. 
+"start":"nodemon --experimental-json-modules --exec babel-node index.js"
+The flag --experimental-json-modules allows us to run the script using a json module(since we changed the type element above to type module)
+The last three commands tell the program to run at entry point index js, using the node package from babel
+

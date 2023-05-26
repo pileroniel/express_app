@@ -1,11 +1,11 @@
 {
   "name": "expressproject",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon --experimental-json-modules --exec babel-node index.js"
+    "start": "nodemon --experimental-json-modules --exec babel-node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,9 +14,9 @@
     "nodemon": "^2.0.20"
   },
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.19.6",
-    "@babel/node": "^7.19.1",
-    "@babel/preset-env": "^7.19.4"
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
   }
 }
