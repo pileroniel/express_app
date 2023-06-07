@@ -24,3 +24,53 @@ In the scripts section we configure how our start script works.
 The flag --experimental-json-modules allows us to run the script using a json module(since we changed the type element above to type module)
 The last three commands tell the program to run at entry point index js, using the node package from babel
 
+
+## Express Routing Fundamentals
+CRUD Operations
+Create - POST
+Read - GET
+Update - PUT
+Delete - DELETE
+
+### Routing Parameters
+req.params sends us the parameters and arguments specified by the url request using the syntax /path/:reqParam/
+
+We can chain callback functions using the next() function
+
+### Middleware functions
+- built in functions include
+    - express.static
+    - express.json - it parses json encoded data 
+        {'name':'Ron Pile', title:'student', age:19}
+    - express.urlencoded - parses url encode data i.e 
+        name=Ron + Pile& title=student&age=19
+
+- Utilize middleware functions for error handling.
+
+Setting up a custom err handler is important to avoid the user fromm
+getting sercer errors 
+
+Third party middlewares - https://expressjs.com/en/resources/middleware.html
+
+### Debug Mode
+Logging in information about route matches, middleware functions in use, 
+application mdoe and the flow of the req-res cycle
+
+set DEBUG=express:* & node index.js
+
+since in this project we're using es6 and also json modules, we add
+the flag --experimental-json-modules after the asterisk, i.e
+
+set DEBUG=express:* & node --experimental-json-modules index.js
+
+You can add this to the package.json file as a script,adding to it
+the start script code so that it debugs and starts with all the functions of start
+
+### Security Best Practices
+
+- Use the most up to date version of express and dependencies
+- Use TLS encryption (Transport Layer Security)- communication over the internet. Let's Encrypt!!!
+- Use Helmet (set http headers appropriately and securely)
+- Use Cookies securely
+- Prevent brute-force attacks against authorization (rate-limiter-flexible package)
+- Ensure dev dependencies are secure using npm audit
